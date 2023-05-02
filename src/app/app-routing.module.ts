@@ -1,25 +1,28 @@
+//Modulos
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from "@angular/router";
-import { InicioComponent } from './pages/inicio/inicio.component';
+
+//Componentes
 import { AboutComponent } from './pages/about/about.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { TerminosComponent } from './pages/terminos/terminos.component';
 import { ItemComponent } from './pages/item/item.component';
+import { ProyectosComponent } from './pages/proyectos/proyectos.component';
 
 
 
 const appRoutes: Routes = [
-    { path:'inicio', component: InicioComponent},
+    { path:'', component: PortfolioComponent},  //RUTA PRINCIPAL
     { path:'about', component: AboutComponent},
-    { path:'portfolio', component: PortfolioComponent},
     { path:'terminos', component: TerminosComponent},
-    { path:'portfolio/item', component: ItemComponent},
-    { path:'inicio/item', component: ItemComponent }
+    { path:'item', component: ItemComponent},
+    { path:'proyectos', component: ProyectosComponent},
+    { path:'**', pathMatch: 'full', redirectTo: '' },
 ];
 
 @NgModule ({
     imports: [
-    RouterModule.forRoot( appRoutes, {useHash:true})
+    RouterModule.forRoot( appRoutes, {useHash:true} )
     ],
     exports: [
     RouterModule
