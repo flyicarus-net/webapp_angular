@@ -8,6 +8,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { TerminosComponent } from './pages/terminos/terminos.component';
 import { ItemComponent } from './pages/item/item.component';
 import { ProyectosComponent } from './pages/proyectos/proyectos.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
 
 
 
@@ -17,6 +18,8 @@ const appRoutes: Routes = [
     { path:'terminos', component: TerminosComponent},
     { path:'item', component: ItemComponent},
     { path:'proyectos', component: ProyectosComponent},
+    { path:'contacto', component: ContactoComponent},
+
     { path:'**', pathMatch: 'full', redirectTo: '' },
 ];
 
